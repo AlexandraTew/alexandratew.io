@@ -1,4 +1,20 @@
 <!DOCTYPE HTML>
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+	const resizeOps = () => {
+		document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + "px");
+	  };
+	
+	  resizeOps();
+	window.addEventListener("resize", resizeOps);
+	html, body {
+	height: 100vh;
+	height: calc(var(--vh, 1vh) * 100);
+	}
+	.modal {
+		width: 50vw;
+		height: 50vh;
+		height: calc(var(--vh, 1vh) * 50);
+	  }
 <html>
 	<head>
 		<title>Masters Thesis</title>
