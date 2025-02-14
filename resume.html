@@ -50,57 +50,118 @@
 								<img src="Resume2024.jpg" alt="" />
 							</span> -->
                             <style>
+								.inner h2 {
+									text-align: center; 
+									width: 100%; 
+								}
+
                                 .image {
                                     display: block;
                                     margin: 0 auto;
-                                    max-width: 100%;
+                                    max-width: 75%;
                                     height: auto;
                                     text-align: center;
                                 }
                             </style>
-                            <img class="image" src="Resume2024.jpg" alt="Resume Image">
+                            <img class="image" src="AlexResume2025.jpg" alt="Resume Image">
                             <style>
+								.pdf-container {
+									display: flex;
+									justify-content: center; /* Centers horizontally */
+									align-items: center; /* Centers vertically (if needed) */
+									width: 100%; /* Ensures full-width centering */
+									margin-top: 15px; /* Adds spacing */
+								}
                                 .pdf-link {
-                                    display: block;
-                                    padding: 10px 20px;
-                                    background-color: #FFFFFF;
-                                    color: #FFFFFF;
+                                    display: inline-block;
+                                    padding: 6px 12px;
+									font-size: 14px;
+                                    background-color: #57dac2;
+                                    color: #1B1E34;
                                     text-decoration: none;
                                     border-radius: 4px;
+									border: 1px solid #1B1E34;
                                     text-align: center;
+									border-radius: 4px;
+									font-weight: bold;
+									transition: background-color 0.3s ease, color 0.3s ease;
                                 }
+								
                             </style>
-                            <a class="pdf-link" href="Resume Alexandra Tew 2024.pdf">Download PDF</a>
+                            <div class="pdf-container">
+								<a class="pdf-link" href="Resume Alexandra Tew 2025.pdf">Download PDF</a>
+							</div>
                         </div>
                     </section>
-                    <!-- Footer -->
-                    <style>
-                        #footer {
-                          text-align: center;
-                          margin-top: 50px; /* Adjust the margin-top value as needed */
-                        }
-                      
-                        .icons {
-                          display: inline-block;
-                          list-style: none;
-                          padding: 0;
-                        }
-                      
-                        .icons li {
-                          display: inline-block;
-                          margin-right: 10px; /* Adjust the margin-right value as needed */
-                        }
-                    </style>
-					<footer id="footer">
-						<div class="inner">
-							<ul class="icons">
-								<li><a href="https://sigmoid.social/@AlexandraTew" target= "_blank" class="icon brands alt fa-mastodon"><span class="label">Mastodon</span></a></li>
-								<li><a href="https://github.com/AlexandraTew" target= "_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="https://www.linkedin.com/in/alexandratew/" target= "_blank" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							</ul>	
-						</div>
-					</footer>
+						<!-- Footer -->
+						<style>
+							
+							#footer {
+								text-align: center;
+								margin-top: 50px; /* Adjust the margin-top value as needed */
+							}
+							#footer .inner {
+								display: flex;
+								justify-content: center;  /* Centers all icons horizontally */
+								align-items: center;  /* Ensures vertical alignment */
+								gap: 15px;  /* Adds space between icons */
+							}
+							
+							.icons {
+								display: flex; /* Ensures icons are evenly spaced */
+								justify-content: center;
+								align-items: center;
+								padding: 0;
+								list-style: none;
+							}
+							
+							.icons li {
+								display: flex;
+								align-items: center;
+								justify-content: center;
+							}
 
+							.icons li a[href*="tableau.com"]{
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								text-decoration: none !important;
+								border-bottom: none !important;
+								outline: none !important;
+							}
+							
+							.icons li a img.tableau-icon {
+    							display: inline-block;
+								border: none !important; /* Ensures it doesn’t behave like text */
+								text-decoration: none !important;
+								border-bottom: none !important;
+							}	
+
+							.tableau-icon {
+								width: 90px; /* Adjust size as needed */
+								height: auto;
+								display: inline-block; /* Matches Font Awesome behavior */
+								text-decoration: none !important;
+								border-bottom: none !important;
+							}
+						</style>
+						<footer id="footer">
+							<div class="inner">
+								<ul class="icons">
+									<li>
+										<a href="https://public.tableau.com/app/profile/alexandra.tew/" target="_blank">
+											<img src="tableau_logo.png" alt="Tableau Public" class="tableau-icon">
+										</a>
+									</li>
+									<li>
+										<a href="https://github.com/AlexandraTew" target= "_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a>
+									</li>
+									<li>
+										<a href="https://www.linkedin.com/in/alexandratew/" target= "_blank" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a>
+									</li>
+								</ul>	
+							</div>
+						</footer>					
 			</div>
 
 		<!-- Scripts -->
