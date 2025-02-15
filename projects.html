@@ -14,7 +14,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<a href="index.html" class="logo"><strong>Alexandra Tew</strong> <span>Data Analyst</span></a>
+						<a href="index.html" class="logo"><strong>Alexandra Tew</strong> <span>BI Developer</span></a>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -25,7 +25,7 @@
 						<ul class="links">
 							<li><a href="index.html">Home</a></li>
 							<li><a href="resume.html">Resume</a></li>
-							<li><a href="projects.html">Recent Projects</a></li>
+							<li><a href="projects.html">About Me</a></li>
 							<li><a href="thesis.html">Masters Thesis</a></li>
 						</ul>
 					</nav>
@@ -41,8 +41,8 @@
 									</header>
 									<span class="image main"><img src="images/datascience.jpg" alt="" /></span>
 									<h3>This page is getting an update!</h3>
-									<p>Current projects coming soon! To view the code that built this website and recent python and java projects, click the link below to view my GitHub Repositories.</p>
-									<li><a href="https://github.com/AlexandraTew" target= "_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+									<p>Current projects coming soon! To view the code that built this website or to check out my Tableau Public profile, click the icons below.</p>
+									<!-- <li><a href="https://github.com/AlexandraTew" target= "_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li> -->
 								</div>
 							</section>
 					</div>
@@ -50,30 +50,71 @@
 					<!-- Footer -->
 					<style>
 						#footer {
-						text-align: center;
-						margin-top: 50px; /* Adjust the margin-top value as needed */
+							text-align: center;
+							margin-top: 50px; /* Adjust the margin-top value as needed */
 						}
-					
+						#footer .inner {
+							display: flex;
+							justify-content: center;  /* Centers all icons horizontally */
+							align-items: center;  /* Ensures vertical alignment */
+							gap: 15px;  /* Adds space between icons */
+						}
+						
 						.icons {
-						display: inline-block;
-						list-style: none;
-						padding: 0;
+							display: flex; /* Ensures icons are evenly spaced */
+							justify-content: center;
+							align-items: center;
+							padding: 0;
+							list-style: none;
 						}
-					
+						
 						.icons li {
-						display: inline-block;
-						margin-right: 10px; /* Adjust the margin-right value as needed */
+							display: flex;
+							align-items: center;
+							justify-content: center;
+						}
+
+						.icons li a[href*="tableau.com"]{
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							text-decoration: none !important;
+							border-bottom: none !important;
+							outline: none !important;
+						}
+						
+						.icons li a img.tableau-icon {
+							display: inline-block;
+							border: none !important; /* Ensures it doesn’t behave like text */
+							text-decoration: none !important;
+							border-bottom: none !important;
+						}	
+
+						.tableau-icon {
+							width: 90px; /* Adjust size as needed */
+							height: auto;
+							display: inline-block; /* Matches Font Awesome behavior */
+							text-decoration: none !important;
+							border-bottom: none !important;
 						}
 					</style>
 					<footer id="footer">
 						<div class="inner">
 							<ul class="icons">
-								<li><a href="https://sigmoid.social/@AlexandraTew" target= "_blank" class="icon brands alt fa-mastodon"><span class="label">Mastodon</span></a></li>
-								<li><a href="https://github.com/AlexandraTew" target= "_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="https://www.linkedin.com/in/alexandratew/" target= "_blank" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								<li>
+									<a href="https://public.tableau.com/app/profile/alexandra.tew/" target="_blank">
+										<img src="tableau_logo.png" alt="Tableau Public" class="tableau-icon">
+									</a>
+								</li>
+								<li>
+									<a href="https://github.com/AlexandraTew" target= "_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a>
+								</li>
+								<li>
+									<a href="https://www.linkedin.com/in/alexandratew/" target= "_blank" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a>
+								</li>
+							</ul>	
 						</div>
-					</footer>
-
+					</footer>					
 			</div>
 
 		<!-- Scripts -->
