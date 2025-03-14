@@ -29,6 +29,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+strong {
+	font-weight: bold;}
+
 body {
 	line-height: 1;
 }
