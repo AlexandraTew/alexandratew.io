@@ -1817,6 +1817,18 @@ input, select, textarea {
 		}
 
 	}
+		.major.center {
+		width: 100%;
+		text-align: center;
+	}
+
+	.major.center > :first-child {
+		width: auto;
+	}
+
+	.major.center > :first-child:after {
+		width: 100%;
+	}
 
 /* Form */
 

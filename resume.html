@@ -6,172 +6,421 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<style>
+			/* Resume page custom styling */
+
+			.resume-page-section .inner h2,
+			.projects-intro .inner h2 {
+				text-align: center;
+				width: 100%;
+			}
+
+			#projects header.major,
+			#resume header.major {
+				display: block !important;
+				width: 100% !important;
+				text-align: center !important;
+			}
+
+			#projects header.major h2,
+			#resume header.major h2 {
+				display: inline-block !important;
+			}
+
+			.projects-intro .inner p {
+				max-width: 760px;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+			}
+
+			.project-tiles article {
+				position: relative;
+				overflow: hidden;
+				min-height: 360px;
+			}
+
+			.project-tiles article .image img {
+				transition: transform 0.45s ease, opacity 0.45s ease;
+			}
+
+			.project-front {
+				transition: opacity 0.35s ease;
+				z-index: 2;
+			}
+
+			.project-back {
+				position: absolute;
+				inset: 0;
+				padding: 2.25em;
+				background: rgba(36, 41, 67, 0.94);
+				color: #ffffff;
+				opacity: 0;
+				overflow-y: auto;
+				transition: opacity 0.35s ease;
+				z-index: 3;
+			}
+
+			.project-back h3 {
+				margin: 0 0 0.85em 0;
+				color: #ffffff;
+			}
+
+			.project-back strong {
+				color: #57dac2;
+				display: block;
+				margin-top: 1em;
+				margin-bottom: 0.25em;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+				font-size: 0.75em;
+			}
+
+			.project-back p {
+				font-size: 0.86em;
+				line-height: 1.45;
+				margin: 0 0 0.6em 0;
+			}
+
+			.project-tiles article:hover .project-front,
+			.project-tiles article.active .project-front {
+				opacity: 0;
+			}
+
+			.project-tiles article:hover .project-back,
+			.project-tiles article.active .project-back {
+				opacity: 1;
+			}
+
+			.project-tiles article:hover .image img,
+			.project-tiles article.active .image img {
+				transform: scale(1.05);
+				opacity: 0.35;
+			}
+
+			.resume-image {
+				display: block;
+				margin: 0 auto;
+				max-width: 75%;
+				height: auto;
+				text-align: center;
+			}
+
+			.pdf-container {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				margin-top: 15px;
+			}
+
+			.pdf-link {
+				display: inline-block;
+				padding: 6px 12px;
+				font-size: 14px;
+				background-color: #57dac2;
+				color: #1B1E34;
+				text-decoration: none;
+				border: 1px solid #1B1E34;
+				border-radius: 4px;
+				text-align: center;
+				font-weight: bold;
+				transition: background-color 0.3s ease, color 0.3s ease;
+			}
+
+			.pdf-link:hover {
+				background-color: #ffffff;
+				color: #1B1E34 !important;
+			}
+
+			#footer {
+				text-align: center;
+				margin-top: 50px;
+			}
+
+			#footer .inner {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 15px;
+			}
+
+			.icons {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: 0;
+				list-style: none;
+			}
+
+			.icons li {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.icons li a[href*="tableau.com"],
+			.icons li a img.tableau-icon {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-decoration: none !important;
+				border: none !important;
+				border-bottom: none !important;
+				outline: none !important;
+			}
+
+			@media screen and (max-width: 736px) {
+				.project-tiles article {
+					min-height: 430px;
+				}
+
+				.project-back {
+					padding: 1.75em;
+				}
+
+				.resume-image {
+					max-width: 95%;
+				}
+			}
+		</style>
 	</head>
+
 	<body class="is-preload">
-			<div id="wrapper">
-					<header id="header" class="alt style2">
-						<a href="index.html" class="logo"><strong>Alexandra Tew</strong> <span>Resume</span></a>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header" class="alt style2">
+				<a href="index.html" class="logo"><strong>Alexandra Tew</strong> <span>Resume</span></a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+			<!-- Menu -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="resume.html">Resume</a></li>
+					<li><a href="aboutme.html">About Me</a></li>
+					<li><a href="thesis.html">Masters Thesis</a></li>
+				</ul>
+			</nav>
+
+			<!-- Banner -->
+			<section id="banner" class="style2">
+				<div class="inner">
+					<span class="image">
+						<img src="images/pic07.jpg" alt="" />
+					</span>
+					<header class="major">
+						<h1>Alexandra Tew</h1>
 					</header>
+					<div class="content">
+						<p>Analytics Engineer with roots in bioinformatics and a focus on building reliable, SQL-driven data pipelines in Snowflake, bridging scientific computing principles with production-grade operational analytics.</p>
+					</div>
+				</div>
+			</section>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="resume.html">Resume</a></li>
-							<li><a href="aboutme.html">About Me</a></li>
-							<li><a href="thesis.html">Masters Thesis</a></li>
-						</ul>
-					</nav>
+			<!-- Main -->
+			<div id="main">
 
-				<!-- Banner -->
-				<!-- Note: The "styleN" class below should match that of the header element. -->
-					<section id="banner" class="style2">
-						<div class="inner">
+				<!-- Selected Projects -->
+				<section id="projects" class="projects-intro">
+					<div class="inner">
+						<header class="major center">
+							<h2>Selected Projects</h2>
+						</header>
+						<p>A curated selection of analytics, reporting, automation, and research projects that represent the range of systems, datasets, and business questions I have worked through.</p>
+					</div>
+
+					<section class="tiles project-tiles">
+						<article>
 							<span class="image">
-								<img src="images/pic07.jpg" alt="" />
+								<img src="images/pic01.jpg" alt="" />
 							</span>
-							<header class="major">
-								<h1>Alexandra Tew</h1>
+							<header class="major project-front">
+								<h3>Environmental Affairs Ingestion Platform</h3>
+								<p>Data Integration & Automation</p>
 							</header>
-							<div class="content">
-								<p>Analytics Engineer with roots in bioinformatics and a focus on building reliable, SQL-driven data pipelines in Snowflake, bridging scientific computing principles with production-grade operational analytics.</p>
+							<div class="project-back">
+								<h3>Environmental Affairs Ingestion Platform</h3>
+								<strong>Need</strong>
+								<p>Deliver a scalable data ingestion process for the Environmental Affairs team while providing operational visibility into records that could not be processed automatically.</p>
+								<strong>Solution</strong>
+								<p>Developed the exception management application supporting a larger ingestion platform, allowing users to identify, investigate, and resolve invoice processing issues through an interactive Tableau interface.</p>
+								<strong>Challenge</strong>
+								<p>Environmental invoices arrived in a wide variety of formats, requiring flexible validation logic and clear categorization of processing failures so users could quickly determine the appropriate resolution.</p>
+								<strong>Result</strong>
+								<p>Created an operational support tool that complemented the ingestion platform by improving transparency into processing exceptions and enabling faster resolution of data quality issues before downstream reporting.</p>
 							</div>
-						</div>
+						</article>
+
+						<article>
+							<span class="image">
+								<img src="images/pic02.jpg" alt="" />
+							</span>
+							<header class="major project-front">
+								<h3>Shift Based Driver Hours of Service Model</h3>
+								<p>Analytics Engineering</p>
+							</header>
+							<div class="project-back">
+								<h3>Shift Based Driver Hours of Service Model</h3>
+								<strong>Need</strong>
+								<p>Develop a reliable analytical model that accurately represented driver Hours of Service activity across operational shifts, supporting compliance reporting and transportation analytics.</p>
+								<strong>Solution</strong>
+								<p>Designed a shift-based data model that transformed raw telematics events into complete operational timelines, accounting for shift boundaries, time zones, duty status transitions, and daily reporting requirements.</p>
+								<strong>Challenge</strong>
+								<p>Driver activity rarely aligned with calendar days. Building an accurate model required resolving complex edge cases including overnight shifts, timezone differences, gaps in activity, and multiple reporting perspectives while maintaining consistent business logic.</p>
+								<strong>Result</strong>
+								<p>Delivered a robust analytical model that provided a reliable foundation for compliance reporting and operational analysis, transforming complex event data into trusted, shift-oriented metrics for downstream reporting.</p>
+							</div>
+						</article>
+
+						<article>
+							<span class="image">
+								<img src="images/pic03.jpg" alt="" />
+							</span>
+							<header class="major project-front">
+								<h3>Treasury Ingestion Application</h3>
+								<p>Financial Data Engineering</p>
+							</header>
+							<div class="project-back">
+								<h3>Treasury Ingestion Application</h3>
+								<strong>Need</strong>
+								<p>Modernize the monthly treasury reporting process by replacing repetitive manual data entry with a streamlined application that supported the Capital and Liquidity reporting workflow.</p>
+								<strong>Solution</strong>
+								<p>Designed and developed a Streamlit application that ingested standardized treasury workbooks, validated user inputs, and loaded approved financial data directly into Snowflake for downstream reporting.</p>
+								<strong>Challenge</strong>
+								<p>Although the workbook followed a standardized layout, the application required precise extraction logic, robust validation, and a user-friendly interface that balanced automation with the flexibility needed for manual financial adjustments.</p>
+								<strong>Result</strong>
+								<p>Delivered a self-service application that reduced manual processing, improved data consistency, and simplified the monthly reporting process while providing a scalable foundation for future enhancements.</p>
+							</div>
+						</article>
+
+						<article>
+							<span class="image">
+								<img src="images/pic04.jpg" alt="" />
+							</span>
+							<header class="major project-front">
+								<h3>Operational Snapshot Architecture</h3>
+								<p>Data Architecture</p>
+							</header>
+							<div class="project-back">
+								<h3>Operational Snapshot Architecture</h3>
+								<strong>Need</strong>
+								<p>Capture accurate point-in-time operational metrics for planning and logistics teams, preserving historical values that could not be reconstructed reliably from continuously changing source systems.</p>
+								<strong>Solution</strong>
+								<p>Designed a reusable snapshot architecture using scheduled Snowflake tasks and stored procedures to capture daily operational states, supporting multiple business processes including trailer management, planning, and landmark reporting.</p>
+								<strong>Challenge</strong>
+								<p>Operational data changed continuously throughout the day, requiring careful consideration of snapshot timing, scheduling, and data consistency to ensure each historical record accurately reflected the business state at the intended point in time.</p>
+								<strong>Result</strong>
+								<p>Delivered a scalable snapshot framework that enabled reliable historical reporting across multiple operational datasets and established a repeatable pattern for future point-in-time reporting requirements.</p>
+							</div>
+						</article>
+
+						<article>
+							<span class="image">
+								<img src="images/pic05.jpg" alt="" />
+							</span>
+							<header class="major project-front">
+								<h3>Enterprise Data Integration</h3>
+								<p>Data Modeling & Integration</p>
+							</header>
+							<div class="project-back">
+								<h3>Enterprise Data Integration</h3>
+								<strong>Need</strong>
+								<p>Integrate data from multiple legacy business systems into standardized analytical models that supported enterprise reporting while preserving consistent business definitions across functional areas.</p>
+								<strong>Solution</strong>
+								<p>Designed mapping logic and dimensional models to transform disparate operational data into unified reporting structures, partnering with business stakeholders to validate calculations, relationships, and reporting requirements.</p>
+								<strong>Challenge</strong>
+								<p>Legacy source systems frequently represented the same business concepts differently, requiring careful analysis of data lineage, transformation rules, and business processes to produce reliable, trusted reporting models.</p>
+								<strong>Result</strong>
+								<p>Delivered scalable analytical models that established a consistent foundation for enterprise reporting, reducing ambiguity across source systems and improving confidence in downstream analytics.</p>
+							</div>
+						</article>
+
+						<article>
+							<span class="image">
+								<img src="images/pic06.jpg" alt="" />
+							</span>
+							<header class="major project-front">
+								<h3>Snowflake Platform Migration</h3>
+								<p>Cloud Data Engineering</p>
+							</header>
+							<div class="project-back">
+								<h3>Snowflake Platform Migration</h3>
+								<strong>Need</strong>
+								<p>Migrate RCT's analytics environment from one Snowflake instance to another while maintaining data integrity, business continuity, and downstream reporting.</p>
+								<strong>Solution</strong>
+								<p>Led the migration of tables, models, and supporting analytics assets, validating objects and dependencies to ensure a seamless transition between Snowflake environments.</p>
+								<strong>Challenge</strong>
+								<p>The migration involved coordinating numerous interconnected data models, views, stored procedures, and reporting dependencies, requiring careful validation to ensure functional parity in the new environment.</p>
+								<strong>Result</strong>
+								<p>Successfully transitioned the analytics environment with minimal disruption, providing a stable foundation for continued development and reporting on the new Snowflake platform.</p>
+							</div>
+						</article>
 					</section>
+				</section>
 
-                <!-- Resume -->
-                    <section id="elements" class="style2">
-						<div class="inner">
-                            <h2>Resume</h2>
-                            <!-- <span class="image">
-								<img src="Resume2024.jpg" alt="" />
-							</span> -->
-                            <style>
-								.inner h2 {
-									text-align: center; 
-									width: 100%; 
-								}
+				<!-- Resume -->
+				<section id="resume" class="resume-page-section style2">
+					<div class="inner">
+						<header class="major center">
+							<h2>Resume</h2>
+						</header>
 
-                                .image {
-                                    display: block;
-                                    margin: 0 auto;
-                                    max-width: 75%;
-                                    height: auto;
-                                    text-align: center;
-                                }
-                            </style>
-                            <img class="image" src="images/ResumeAlexTew2026.jpg" alt="Resume Image">
-                            <style>
-								.pdf-container {
-									display: flex;
-									justify-content: center; /* Centers horizontally */
-									align-items: center; /* Centers vertically (if needed) */
-									width: 100%; /* Ensures full-width centering */
-									margin-top: 15px; /* Adds spacing */
-								}
-                                .pdf-link {
-                                    display: inline-block;
-                                    padding: 6px 12px;
-									font-size: 14px;
-                                    background-color: #57dac2;
-                                    color: #1B1E34;
-                                    text-decoration: none;
-                                    border-radius: 4px;
-									border: 1px solid #1B1E34;
-                                    text-align: center;
-									border-radius: 4px;
-									font-weight: bold;
-									transition: background-color 0.3s ease, color 0.3s ease;
-                                }
-								
-                            </style>
-                            <div class="pdf-container">
-								<a class="pdf-link" href="Resume Alexandra Tew 2026.pdf">Download PDF</a>
-							</div>
-                        </div>
-                    </section>
-						<!-- Footer -->
-						<style>
-							#footer {
-								text-align: center;
-								margin-top: 50px; /* Adjust the margin-top value as needed */
-							}
-							#footer .inner {
-								display: flex;
-								justify-content: center;  /* Centers all icons horizontally */
-								align-items: center;  /* Ensures vertical alignment */
-								gap: 15px;  /* Adds space between icons */
-							}
-							
-							.icons {
-								display: flex; /* Ensures icons are evenly spaced */
-								justify-content: center;
-								align-items: center;
-								padding: 0;
-								list-style: none;
-							}
-							
-							.icons li {
-								display: flex;
-								align-items: center;
-								justify-content: center;
-							}
+						<img class="resume-image" src="images/ResumeAlexTew2026.jpg" alt="Resume Image" />
 
-							.icons li a[href*="tableau.com"]{
-								display: flex;
-								align-items: center;
-								justify-content: center;
-								text-decoration: none !important;
-								border-bottom: none !important;
-								outline: none !important;
-							}
-							
-							.icons li a img.tableau-icon {
-    							display: inline-block;
-								border: none !important; /* Ensures it doesn’t behave like text */
-								text-decoration: none !important;
-								border-bottom: none !important;
-							}	
+						<div class="pdf-container">
+							<a class="pdf-link" href="Resume Alexandra Tew 2026.pdf">Download PDF</a>
+						</div>
+					</div>
+				</section>
 
-							.tableau-icon {
-								width: 90px; /* Adjust size as needed */
-								height: auto;
-								display: inline-block; /* Matches Font Awesome behavior */
-								text-decoration: none !important;
-								border-bottom: none !important;
-							}
-						</style>
-						<footer id="footer">
-							<div class="inner">
-								<ul class="icons">
-									<!-- <li>
-										<a href="https://public.tableau.com/app/profile/alexandra.tew/" target="_blank">
-											<img src="tableau_logo.png" alt="Tableau Public" class="tableau-icon">
-										</a>
-									</li> -->
-									<li>
-										<a href="https://github.com/AlexandraTew" target= "_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a>
-									</li>
-									<li>
-										<a href="https://www.linkedin.com/in/alexandratew/" target= "_blank" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a>
-									</li>
-								</ul>	
-							</div>
-						</footer>					
 			</div>
 
+			<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<!--
+						<li>
+							<a href="https://public.tableau.com/app/profile/alexandra.tew/" target="_blank">
+								<img src="tableau_logo.png" alt="Tableau Public" class="tableau-icon">
+							</a>
+						</li>
+						-->
+						<li>
+							<a href="https://github.com/AlexandraTew" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/in/alexandratew/" target="_blank" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a>
+						</li>
+					</ul>
+				</div>
+			</footer>
+
+		</div>
+
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<script>
+			// Allows project cards to be tapped open on touch devices.
+			document.querySelectorAll('.project-tiles article').forEach(function(card) {
+				card.addEventListener('click', function() {
+					card.classList.toggle('active');
+				});
+			});
+		</script>
 
 	</body>
-
 </html>
